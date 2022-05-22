@@ -1,0 +1,7 @@
+go to "docker" folder and run these: (the docker file is excessive and can be trimmed down, but it worked 
+docker build --force-rm -f Dockerfile.static -t fffaraz/qt:static .atic
+docker run --rm -it -v /home/omer/temp/openfortigui:/openfortigui fffaraz/qt:static
+
+in the docker:
+cd /openfortigui/openfortigui
+echo "y" | debuild -eDEB_BUILD_OPTIONS="parallel=4" -us -uc
